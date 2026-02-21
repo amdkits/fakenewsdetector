@@ -12,8 +12,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
 # STEP 2: Load Dataset
-fake_data = pd.read_csv("Fake.csv")
-true_data = pd.read_csv("True.csv")
+fake_data = pd.read_csv("../data/raw/Fake.csv")
+true_data = pd.read_csv("../data/raw/True.csv")
 
 # STEP 3: Add Labels
 fake_data["label"] = 0  # Fake = 0
