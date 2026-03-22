@@ -9,15 +9,25 @@ The model is trained on the Kaggle Fake and True News dataset.
 ```
 .
 ├── data
-│   └── raw
-│       ├── Fake.csv
-│       └── True.csv
+│   ├── raw
+│   │   ├── Fake.csv
+│   │   └── True.csv
+│   └── test
+│       ├── fake_news.txt
+│       └── real_news.txt
+├── model.pkl
 ├── poetry.lock
 ├── pyproject.toml
 ├── README.md
 ├── run.py
-└── src
-    └── pipeline.py
+├── src
+│   ├── pipeline.py
+│   └── __pycache__
+│       ├── pipeline.cpython-314.pyc
+│       └── run.cpython-314.pyc
+└── vectorizer.pkl
+
+6 directories, 13 files
 ```
 
 ## Requirements
