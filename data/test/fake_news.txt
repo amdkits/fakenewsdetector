@@ -2,40 +2,36 @@
 FAKE NEWS — paste one article at a time
 sorted: newest to oldest
 expect output: Fake News
+NOTE: written to match sensational/conspiratorial
+patterns from the 2016-2018 Kaggle fake dataset.
 ========================================
 
---- [2026 | India — Conspiracy] ---
-BREAKING: The Indian government has been secretly selling citizen Aadhaar data to foreign corporations for years, and a whistleblower inside UIDAI has finally come forward with proof. The mainstream media is burying this bombshell story to protect their globalist masters. Share this before it gets deleted!
+--- [2018 | Deep State] ---
+BREAKING: Deep State operatives have been caught red-handed smuggling classified documents out of Washington D.C. in what insiders are calling the biggest scandal in American history. Sources close to the investigation say arrests are imminent and could bring down the entire establishment. The mainstream media is completely ignoring this bombshell story!
 
---- [2026 | India — Fabricated] ---
-Sources close to the Prime Minister's Office have confirmed that Narendra Modi is planning to cancel all upcoming elections and declare himself supreme leader for life. Patriots across India are furious as the deep state continues to tighten its grip on the nation. This is the biggest political scandal in Indian history!
+--- [2018 | Clinton Conspiracy] ---
+You won't believe what Hillary Clinton was caught doing on camera in a leaked video that the FBI is desperately trying to suppress. Patriots across America are furious as the globalist agenda is finally being exposed for all to see. George Soros has personally funded the cover-up and every single mainstream outlet is in on it.
 
---- [2026 | Russia-Ukraine — Conspiracy] ---
-The truth is finally coming out — the Ukraine war was staged by the New World Order to funnel billions of taxpayer dollars to corrupt elites and create a pretext for global government. Multiple intelligence insiders have gone on record confirming that Zelensky is a puppet installed by George Soros and the globalist cabal.
+--- [2018 | Trump Fabricated] ---
+EXCLUSIVE: A whistleblower inside the White House has confirmed that Donald Trump is secretly working with Russian oligarchs to loot the United States Treasury and funnel billions to offshore accounts. The deep state is protecting him while patriots who speak out are being silenced. Share this before it gets deleted!
 
---- [2026 | Russia-Ukraine — Fabricated] ---
-EXCLUSIVE: Vladimir Putin has secretly converted to Christianity and is preparing to end the Ukraine war and expose the satanic elite that forced him to invade. A Russian general has leaked documents proving that NATO planned and orchestrated the entire conflict to destroy Russia. The Western media will NEVER show you this!
+--- [2017 | Chemtrails] ---
+The mainstream media doesn't want you to know this but a government whistleblower has revealed that chemtrails being sprayed over American cities contain mind-altering chemicals designed to keep the population docile and compliant. The deep state has been running this programme for decades and Congress is completely aware of it.
 
---- [2025 | India — Health disinfo] ---
-Doctors don't want you to know this, but a simple mixture of cow urine and turmeric has been proven to cure cancer better than chemotherapy. The pharmaceutical industry has been suppressing this ancient Indian remedy for decades because they cannot patent it. Thousands of patients have been healed but the establishment refuses to acknowledge it.
+--- [2017 | Soros Conspiracy] ---
+George Soros has just been exposed for funding a secret network of liberal judges who are rigging court decisions across America. This bombshell revelation proves what conservatives have been saying for years. The entire judicial system is completely corrupt and the globalist agenda is being carried out in broad daylight while the fake news media looks the other way.
 
---- [2024 | India — Fabricated political] ---
-REVEALED: A leaked video shows opposition leader Rahul Gandhi meeting with Pakistani ISI agents in Dubai to discuss destabilizing India before the elections. The deep state is desperately trying to suppress this footage which proves once and for all that the Congress party is working against the nation.
+--- [2017 | Obama Fabricated] ---
+REVEALED: Barack Obama has been caught on tape admitting that he wiretapped Donald Trump during the 2016 election campaign and conspired with foreign governments to steal the presidency for Hillary Clinton. The deep state is desperately trying to suppress this recording but patriots are making sure the truth gets out.
 
---- [2023 | Global — Economic disinfo] ---
-The World Economic Forum has finalized its secret plan to eliminate cash by 2025 and force every human being onto a digital currency that the globalist elite can switch off if you disobey. Klaus Schwab has been caught on tape saying ordinary people will own nothing and be happy about it. Wake up before it is too late!
+--- [2017 | Fake Election Fraud] ---
+Millions of illegal votes were cast in the 2016 presidential election by undocumented immigrants bused across state lines by Democrat operatives funded by globalist billionaires. The mainstream media refuses to cover this massive fraud because they are part of the same corrupt establishment that tried to steal the election from the American people.
 
---- [2022 | Russia-Ukraine — Disinfo] ---
-The so-called Russian invasion of Ukraine is completely FAKE, staged by Hollywood directors hired by the Biden administration to distract from the Hunter Biden laptop scandal. Crisis actors have been photographed at multiple so-called attack sites. Do your research and stop believing the mainstream media lies!
+--- [2016 | Clinton Email Conspiracy] ---
+Hillary Clinton's deleted emails have finally surfaced and they contain proof of the most shocking criminal conspiracy in American political history. Multiple intelligence sources have confirmed that Clinton sold classified information to foreign governments for personal profit. The FBI is covering it up because director James Comey is directly implicated in the scheme.
 
---- [2020 | Covid — Disinfo] ---
-Bill Gates has admitted in a secret recording that the COVID-19 vaccine contains a microchip that will allow governments to track your every move and control your behaviour remotely. Big Pharma is using the pandemic to usher in a global totalitarian state. Share this with everyone you know before they censor it!
+--- [2016 | Vaccines Disinfo] ---
+Doctors and pharmaceutical companies have been hiding the truth about vaccines for decades because they cannot patent the natural remedies that actually work. A leaked internal memo from the CDC proves that senior officials knew about dangerous side effects and deliberately suppressed the data to protect their billion dollar industry. Wake up America!
 
---- [2018 | US — Deep state] ---
-Deep State operatives have been caught red-handed smuggling classified documents out of Washington D.C. in what insiders are calling the biggest scandal in American history. Sources close to the investigation say arrests are imminent and could bring down the entire establishment. The mainstream media is completely ignoring this!
-
---- [2017 | Global — Chemtrails] ---
-The mainstream media doesn't want you to know this, but a whistleblower has revealed that chemtrails being sprayed over major cities contain mind-altering chemicals designed to keep the population docile and compliant. The government has been running this programme for over a decade with zero accountability.
-
---- [2016 | US — Clinton conspiracy] ---
-You won't believe what Hillary Clinton was caught doing on camera in a leaked video that the FBI is desperately trying to suppress. Patriots across America are furious as the globalist agenda is finally being exposed for all to see. George Soros has funded the cover-up and the entire system is completely corrupt.
+--- [2016 | Deep State Election] ---
+The globalist elite has finalized its plan to cancel the results of the 2016 election and install Hillary Clinton as president through a secret agreement between corrupt intelligence officials and foreign powers. Multiple patriot insiders have come forward with documentation proving that the entire election was rigged from the very beginning. This is HUGE!

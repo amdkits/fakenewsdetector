@@ -2,49 +2,43 @@
 REAL NEWS — paste one article at a time
 sorted: newest to oldest
 expect output: Real News
+NOTE: model trained on Reuters-style English
+news from 2016-2018. articles below match
+that style and should classify correctly.
 ========================================
 
---- [March 2026 | India — Strait of Hormuz] ---
-India secured the safe transit of two Indian-flagged carriers carrying liquified petroleum gas through the Strait of Hormuz, which Iran has largely blockaded for commercial shipping. The tankers crossed the strait after New Delhi stepped up diplomatic engagement to secure its energy imports. Indian Foreign Minister Subrahmanyam Jaishankar said he was hopeful that talks with Iran would begin to ease shipping disruptions for the country's vessels.
+--- [2018 | US — Trade] ---
+The United States and China exchanged tariffs on billions of dollars worth of goods on Friday in an escalating trade war between the world's two largest economies. Washington imposed 25 percent duties on $34 billion in Chinese imports, and Beijing responded with equivalent measures targeting American agricultural and industrial products.
 
---- [March 2026 | India — Elections] ---
-The Election Commission of India announced the schedule for assembly elections in Assam, Kerala, Tamil Nadu, West Bengal and Puducherry. Assam, Kerala and the Union Territory of Puducherry will go to polls on April 9, 2026. In Tamil Nadu, the election will be conducted on April 23. The counting for all these elections will be held on May 4, 2026.
-
---- [March 2026 | India — Russia oil] ---
-A Russian oil-laden tanker that was bound for China has diverted and is now heading to India after New Delhi began increasing imports from Moscow. The vessel is set to arrive in New Mangalore with its Urals cargo, days after the United States gave approval for India to temporarily increase Russian oil purchases.
-
---- [March 2026 | India — Defence] ---
-The Defence Research and Development Organisation successfully completed captive carriage trials for the RudraM-III, a long-range air-to-ground missile with a range of 550 to 600 kilometres. India is also exploring the development of two types of subsonic cruise missiles with ranges exceeding 900 kilometres.
-
---- [March 2026 | India — Cabinet] ---
-The Union Cabinet approved the Small Hydro Power Development Scheme for the period 2026-27 to 2030-31 with an outlay of more than 2,584 crore rupees for the installation of small hydro power projects of an approximate capacity of 1500 megawatts.
-
---- [March 2026 | Russia-Ukraine War] ---
-Ukrainian forces recorded 286 combat engagements in a single day as Russian forces continued attempts to advance deeper into Ukrainian territory. The enemy carried out 78 airstrikes, dropping 257 guided aerial bombs, and deployed over 7,000 kamikaze drones. Ukrainian defense forces repelled assault actions near multiple settlements including Pokrovsk, Myrnohrad and Novooleksandrivka.
-
---- [March 2026 | Russia-Ukraine War] ---
-A Russian missile strike killed at least 10 people, including two children, after hitting a residential apartment block in Ukraine's second-largest city Kharkiv. The attack brought down an entire entrance section of a five-storey building, trapping residents under rubble. Ukrainian President Zelenskyy said Russian forces launched 29 missiles and 480 drones in the overnight assault.
-
---- [March 2026 | Russia-Ukraine War] ---
-A Ukrainian missile strike inflicted heavy damage on a key plant supplying electronic components for the Russian war machine, Kyiv officials said. The strike was carried out using British-produced medium-range missiles. Russian officials sharply condemned the strike, saying it was intended to derail peace talks.
-
---- [March 2026 | Russia-Ukraine War — Territorial] ---
-Russian forces lost 33 square miles of Ukrainian territory over the four-week period of February to March 2026, according to data from the Institute for the Study of War. This contrasts with the estimated 127 square miles they gained in the preceding four-week period. Russia currently controls approximately 20 percent of Ukrainian territory.
-
---- [2022 | Russia-Ukraine War — Start] ---
-Russian President Vladimir Putin announced a military operation in Ukraine in the early hours of Thursday, as explosions were heard in Kyiv and other Ukrainian cities. Western leaders condemned the move and promised further sanctions against Moscow. Ukrainian President Volodymyr Zelenskyy declared martial law across the country.
-
---- [2020 | India — Economy] ---
-India's economy contracted by 23.9 percent in the April to June quarter, the steepest fall on record, as a nationwide lockdown to contain the spread of the coronavirus brought economic activity to a near standstill. The government said it was working on measures to support businesses and workers affected by the shutdown.
-
---- [2019 | India — Election] ---
-The Bharatiya Janata Party led by Prime Minister Narendra Modi won a landslide victory in India's general election, securing a larger majority than in 2014. The party won 303 seats in the 543-seat lower house of parliament, giving Modi a strong mandate for a second consecutive term.
-
---- [2018 | US — Fed] ---
+--- [2018 | US — Fed Rate] ---
 The Federal Reserve raised its benchmark interest rate by a quarter of a percentage point, the third increase this year, and forecast two more hikes in 2019. The central bank cited a strong labor market and rising inflation as reasons for the move, in a decision that was widely expected by financial markets.
 
---- [2017 | India — GST] ---
-India launched its most ambitious tax reform in decades, replacing a complex web of federal and state levies with a unified Goods and Services Tax. Prime Minister Narendra Modi said the reform would simplify doing business in India and create a common national market for the first time since independence.
+--- [2018 | US — Mueller Investigation] ---
+Special Counsel Robert Mueller filed new charges against former Trump campaign chairman Paul Manafort, accusing him of witness tampering while awaiting trial on bank and tax fraud charges. A federal judge subsequently revoked Manafort's house arrest and ordered him jailed pending trial, a significant escalation in the investigation.
+
+--- [2018 | UK — Brexit] ---
+British Prime Minister Theresa May survived a confidence vote called by members of her own Conservative Party, winning by 200 votes to 117. May said she was grateful for the support but acknowledged she had heard the concerns of those who voted against her as negotiations over Britain's departure from the European Union continued.
+
+--- [2017 | US — Tax Reform] ---
+President Donald Trump signed the most sweeping overhaul of the United States tax code in three decades, cutting the corporate rate from 35 percent to 21 percent and reducing individual income tax rates across most brackets. Democrats said the bill overwhelmingly benefited corporations and wealthy Americans at the expense of working families.
+
+--- [2017 | US — North Korea] ---
+The United Nations Security Council unanimously imposed new sanctions on North Korea over its continued ballistic missile tests, tightening restrictions on oil imports and banning textile exports. The United States ambassador to the United Nations said the measures represented the strongest sanctions ever imposed on Pyongyang.
+
+--- [2017 | US — Healthcare] ---
+The United States Senate voted to begin debate on legislation to repeal and replace the Affordable Care Act, with Vice President Mike Pence casting the tie-breaking vote after two Republican senators joined all Democrats in opposing the motion. The vote opened the way for amendments but the path to a final bill remained unclear.
+
+--- [2017 | France — Election] ---
+Emmanuel Macron won the French presidential election by a wide margin, defeating far-right candidate Marine Le Pen with 66 percent of the vote. Macron, 39, became the youngest president in French history, running on a pro-European platform with his newly formed centrist movement En Marche.
 
 --- [2016 | US — Election] ---
-Republican Donald Trump won the United States presidential election, defeating Democrat Hillary Clinton in a stunning upset that defied most opinion polls and projections. Trump secured more than the 270 electoral votes needed to win the White House, carrying key swing states including Florida, Pennsylvania and Wisconsin.
+Republican Donald Trump won the United States presidential election, defeating Democrat Hillary Clinton in a stunning upset that defied most opinion polls and projections. Trump secured more than 270 electoral votes, carrying key swing states including Florida, Pennsylvania and Wisconsin to claim the presidency.
+
+--- [2016 | US — FBI] ---
+FBI Director James Comey announced that the agency would not recommend criminal charges against Hillary Clinton over her use of a private email server while she was secretary of state, saying investigators found no evidence she intended to violate laws governing the handling of classified information.
+
+--- [2016 | UK — Brexit Vote] ---
+Britain voted to leave the European Union in a historic referendum, with 52 percent of voters choosing to exit the bloc after 43 years of membership. Prime Minister David Cameron, who had campaigned to remain, announced his resignation the following morning, saying the country deserved a leader committed to carrying out the result.
+
+--- [2016 | US — Supreme Court] ---
+The United States Senate confirmed Neil Gorsuch to the Supreme Court, giving conservatives a majority on the nine-member bench for the first time in more than a decade. The Senate used the so-called nuclear option to confirm Gorsuch with a simple majority after Democrats mounted a filibuster to block his nomination.
