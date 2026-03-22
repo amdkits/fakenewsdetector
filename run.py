@@ -8,22 +8,33 @@ from src.pipeline import (
     evaluate_model,
     predict_news,
 )
+import joblib
 
+MODEL_PATH = Path("model.pkl")
+VECTORIZER_PATH = Path("vectorizer.pkl")
 
 def main():
     data_dir = Path("data/raw")
 
-    data = load_data(data_dir)
-    data = preprocess_data(data)
-
-    X = data["text"]
-    y = data["label"]
-
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.25, random_state=42
-    )
-
-    model, vectorizer = train_model(X_train, y_train)
+    if MODEL_PATH.exists() and VECTORIZER_PATH.exists():
+        print("Loading saved model...")
+        model = joblib.load(MODEL_PATH)
+        vectorizer = joblib.load(VECTORIZER_PATH)
+        # still need data for evaluate, skip if you don't care about the report
+        data = preprocess_data(load_data(data_dir))
+        _, X_test, _, y_test = train_test_split(
+            data["text"], data["label"], test_size=0.25, random_state=42
+        )
+    else:
+        print("Training model for the first time...")
+        data = preprocess_data(load_data(data_dir))
+        X_train, X_test, y_train, y_test = train_test_split(
+            data["text"], data["label"], test_size=0.25, random_state=42
+        )
+        model, vectorizer = train_model(X_train, y_train)
+        joblib.dump(model, MODEL_PATH)
+        joblib.dump(vectorizer, VECTORIZER_PATH)
+        print("Model saved.")
 
     accuracy, report, cm = evaluate_model(model, vectorizer, X_test, y_test)
 

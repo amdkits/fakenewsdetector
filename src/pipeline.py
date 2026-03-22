@@ -41,6 +41,8 @@ def clean_text(text):
     text = re.sub(r'[%s]' % re.escape(string.punctuation), '', text)
     text = re.sub(r'\n', '', text)
     text = re.sub(r'\w*\d\w*', '', text)
+    
+
     return text
 
 
@@ -54,8 +56,7 @@ def preprocess_data(data):
 # ------------------------
 
 def train_model(X_train, y_train):
-    vectorizer = TfidfVectorizer(max_features=10000,
-                                 ngram_range=(1,2))
+    vectorizer = TfidfVectorizer(max_features=10000, ngram_range=(1,2), sublinear_tf=True)
     X_train_vec = vectorizer.fit_transform(X_train)
 
     model = LogisticRegression(max_iter=300, class_weight="balanced")
