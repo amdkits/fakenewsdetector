@@ -1,5 +1,5 @@
 import os
-from openai import OpenAI
+from groq import Groq
 
 
 def get_top_features(news_vec, model, vectorizer, n=8):
@@ -24,10 +24,7 @@ def get_top_features(news_vec, model, vectorizer, n=8):
 
 
 def explain_prediction(news_text, prediction, proba, fake_features, real_features):
-    client = OpenAI(
-    api_key=os.environ["QWEN_API_KEY"],
-    base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
-)
+    client = Groq(api_key=os.environ["GROQ_API_KEY"])
 
     label = "Fake News" if prediction == 0 else "Real News"
     fake_conf = round(proba[0] * 100, 1)
@@ -49,7 +46,7 @@ Original text:
 Explain in 3-5 sentences why the model made this call. Reference the actual features listed. Be direct, no hedging. Do not explain how TF-IDF works."""
 
     response = client.chat.completions.create(
-        model="qwen-plus",
+        model="llama-3.1-8b-instant",
         messages=[
             {
                 "role": "system",
