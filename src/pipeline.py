@@ -92,4 +92,5 @@ def predict_news(news, model, vectorizer):
 
     print("Probabilities:", proba)
 
-    return "Fake News" if prediction == 0 else "Real News"
+    label = "Fake News" if prediction == 0 else "Real News"
+    return label, prediction, proba, vector

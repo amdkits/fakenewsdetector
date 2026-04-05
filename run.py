@@ -1,5 +1,6 @@
 from pathlib import Path
 from sklearn.model_selection import train_test_split
+from src.explainer import get_top_features, explain_prediction
 
 from src.pipeline import (
     load_data,
@@ -42,7 +43,12 @@ def main():
     print("\nClassification Report:\n", report)
 
     news = input("\nEnter a news headline to test: ")
-    print("Prediction:", predict_news(news, model, vectorizer))
+    label, prediction, proba, vector = predict_news(news, model, vectorizer)
+    print("Prediction:", label)
+
+    if input("Explain? [y/n]: ").strip().lower() == "y":
+        fake_f, real_f = get_top_features(vector, model, vectorizer)
+        print("\n", explain_prediction(news, prediction, proba, fake_f, real_f))
 
 
 if __name__ == "__main__":
