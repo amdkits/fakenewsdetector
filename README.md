@@ -10,8 +10,15 @@ The model is trained on the Kaggle Fake and True News dataset.
 .
 ├── data
 │   ├── raw
-│   │   ├── Fake.csv
-│   │   └── True.csv
+│   │   ├── isot
+│   │   ├── kaggle
+│   │   │   ├── Fake.csv
+│   │   │   └── True.csv
+│   │   └── liar_dataset
+│   │       ├── README
+│   │       ├── test.tsv
+│   │       ├── train.tsv
+│   │       └── valid.tsv
 │   └── test
 │       ├── fake_news.txt
 │       └── real_news.txt
@@ -19,24 +26,22 @@ The model is trained on the Kaggle Fake and True News dataset.
 ├── poetry.lock
 ├── pyproject.toml
 ├── README.md
+├── requirements.txt
 ├── run.py
 ├── src
+│   ├── data_loader.py
+│   ├── explainer.py
+│   ├── feature_engineering.py
+│   ├── __init__.py
 │   ├── pipeline.py
-│   └── __pycache__
-│       ├── pipeline.cpython-314.pyc
-│       └── run.cpython-314.pyc
+│   ├── __pycache__
+│   │   ├── explainer.cpython-314.pyc
+│   │   ├── pipeline.cpython-314.pyc
+│   │   └── run.cpython-314.pyc
+│   └── README.md
 └── vectorizer.pkl
 
-6 directories, 13 files
-```
-
-## Requirements
-
-* Python 3.11+ recommended
-* Kaggle Fake and True News dataset placed inside:
-
-```
-data/raw/
+9 directories, 24 files
 ```
 
 ---
