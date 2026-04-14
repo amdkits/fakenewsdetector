@@ -59,7 +59,7 @@ def build_feature_matrix(texts, vectorizer, fit: bool = False):
 def build_ensemble(lr_C=1.0, rf_n=200, rf_depth=None,
                    xgb_lr=0.1, xgb_n=100, xgb_depth=6) -> VotingClassifier:
     lr = LogisticRegression(
-        C=lr_C, max_iter=500, class_weight="balanced",
+        C=lr_C, max_iter=2000, class_weight="balanced",
         solver="lbfgs", n_jobs=-1
     )
     rf = RandomForestClassifier(
