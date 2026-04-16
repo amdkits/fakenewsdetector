@@ -169,6 +169,48 @@ def evaluate_model(model, vectorizer, X_test, y_test):
     cm       = confusion_matrix(y_test, y_pred)
     return accuracy, report, cm
 
+# ── PER-MODEL EVALUATION ───────────────────────────────────────────────────────
+
+def evaluate_individual_models(model, vectorizer, X_test, y_test):
+    """
+    Evaluate each sub-model (LR, RF, XGB) individually + the full ensemble.
+    Prints a comparison table and returns a dict of results.
+    """
+    X_feat = build_feature_matrix(X_test, vectorizer, fit=False)
+
+    results = {}
+
+    # Extract and evaluate each named estimator from the VotingClassifier
+    for (name, estimator) in zip([e[0] for e in model.estimators], model.estimators_):
+        y_pred = estimator.predict(X_feat)
+        acc = accuracy_score(y_test, y_pred)
+        report = classification_report(y_test, y_pred,
+                                       target_names=["Fake", "Real"],
+                                       output_dict=True)
+        results[name] = {"accuracy": acc, "report": report}
+
+    # Ensemble
+    y_pred_ens = model.predict(X_feat)
+    acc_ens = accuracy_score(y_test, y_pred_ens)
+    report_ens = classification_report(y_test, y_pred_ens,
+                                       target_names=["Fake", "Real"],
+                                       output_dict=True)
+    results["ensemble"] = {"accuracy": acc_ens, "report": report_ens}
+
+    # Print comparison table
+    print("\n" + "=" * 60)
+    print(f"{'Model':<20} {'Accuracy':>10} {'F1 Fake':>10} {'F1 Real':>10}")
+    print("=" * 60)
+    labels = {"lr": "Logistic Regression", "rf": "Random Forest",
+              "xgb": "XGBoost", "ensemble": "Ensemble (all)"}
+    for key, res in results.items():
+        acc = res["accuracy"]
+        f1_fake = res["report"]["Fake"]["f1-score"]
+        f1_real = res["report"]["Real"]["f1-score"]
+        print(f"{labels.get(key, key):<20} {acc:>10.4f} {f1_fake:>10.4f} {f1_real:>10.4f}")
+    print("=" * 60 + "\n")
+
+    return results
 
 # ── PREDICTION ─────────────────────────────────────────────────────────────────
 

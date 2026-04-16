@@ -11,6 +11,8 @@ import argparse
 from pathlib import Path
 import joblib
 from sklearn.model_selection import train_test_split
+from dotenv import load_dotenv
+load_dotenv()
 
 from src.data_loader import load_all
 from src.pipeline import (
@@ -71,6 +73,9 @@ def main():
 
     # ── Evaluate ───────────────────────────────────────────────────────────────
     accuracy, report, cm = evaluate_model(model, vectorizer, X_test, y_test)
+    # Per-model breakdown
+    from src.pipeline import evaluate_individual_models
+    evaluate_individual_models(model, vectorizer, X_test, y_test)
     print(f"\n{'='*50}")
     print(f"Test Accuracy : {accuracy:.4f}")
     print(f"\nClassification Report:\n{report}")

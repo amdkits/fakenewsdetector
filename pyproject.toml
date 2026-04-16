@@ -1,21 +1,28 @@
 [project]
 name = "fake-news-detector"
 version = "0.1.0"
-description = ""
+description = "Ensemble ML model for fake news detection with optimized feature engineering"
 authors = [
-    {name = "amdkits",email = "kits.amd@gmail.com"}
+    {name = "amdkits", email = "kits.amd@gmail.com"}
 ]
-requires-python = ">=3.14"
+requires-python = ">=3.10"
 dependencies = [
-    "numpy (>=2.4.2,<3.0.0)",
-    "pandas (>=3.0.1,<4.0.0)",
-    "scikit-learn (>=1.8.0,<2.0.0)",
-    "matplotlib (>=3.10.8,<4.0.0)",
-    "seaborn (>=0.13.2,<0.14.0)",
-    "openai (>=2.30.0,<3.0.0)",
-    "groq (>=1.1.2,<2.0.0)"
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scikit-learn>=1.4",
+    "matplotlib>=3.7",
+    "seaborn>=0.13",
+    "openai>=1.0",
+    "groq>=0.4",
+    "xgboost>=2.0",
+    "optuna>=3.5",
+    "shap>=0.44",
+    "joblib>=1.3",
+    "scipy>=1.11",
+    "streamlit>=1.35",
+    "textstat>=0.7",
+    "python-dotenv (>=1.2.2,<2.0.0)",
 ]
-
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

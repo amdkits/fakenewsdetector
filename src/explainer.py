@@ -1,95 +1,46 @@
 """
-SHAP-based explainability for the VotingClassifier ensemble.
-Falls back to LR coefficient attribution if SHAP unavailable.
+Feature attribution explainability for VotingClassifier ensemble.
+Uses LR coefficient x feature value (reliable on single samples).
 """
 
 import os
 import numpy as np
 
 
-# ── FEATURE NAMES ──────────────────────────────────────────────────────────────
-
 def get_all_feature_names(vectorizer):
     from src.feature_engineering import HANDCRAFTED_FEATURE_NAMES
     return list(vectorizer.get_feature_names_out()) + HANDCRAFTED_FEATURE_NAMES
 
 
-# ── SHAP ATTRIBUTION ──────────────────────────────────────────────────────────
-
-def get_top_features_shap(feat_matrix, model, vectorizer, n: int = 8):
-    """
-    Use SHAP LinearExplainer on the LR sub-model inside VotingClassifier.
-    Returns (fake_features, real_features) as (name, shap_val) lists.
-    """
-    try:
-        import shap
-    except ImportError:
-        return get_top_features_coef(feat_matrix, model, vectorizer, n)
-
-    # Extract LR from voting ensemble
-    lr_model = dict(model.named_estimators_)["lr"]
-    feature_names = get_all_feature_names(vectorizer)
-
-    explainer = shap.LinearExplainer(lr_model, feat_matrix,
-                                     feature_perturbation="interventional")
-    shap_values = explainer.shap_values(feat_matrix)
-
-    # shap_values shape: (n_samples, n_features) or list for multiclass
-    if isinstance(shap_values, list):
-        # class 1 = real
-        sv = shap_values[1][0]
-    else:
-        sv = shap_values[0]
-
-    sorted_idx = np.argsort(sv)
-    fn = np.array(feature_names)
-
-    fake_features = [
-        (fn[i], round(float(sv[i]), 4))
-        for i in sorted_idx[:n]
-        if sv[i] < 0
-    ]
-    real_features = [
-        (fn[i], round(float(sv[i]), 4))
-        for i in sorted_idx[-n:][::-1]
-        if sv[i] > 0
-    ]
-    return fake_features, real_features
-
-
-# ── COEF FALLBACK ──────────────────────────────────────────────────────────────
-
 def get_top_features_coef(feat_matrix, model, vectorizer, n: int = 8):
-    """Fallback: LR coef × feature value attribution."""
+    """LR coef x feature value — works reliably on single sparse rows."""
     lr_model = dict(model.named_estimators_)["lr"]
-    feature_names = get_all_feature_names(vectorizer)
+    feature_names = np.array(get_all_feature_names(vectorizer))
     coef = lr_model.coef_[0]
     dense = np.asarray(feat_matrix.todense())[0]
     contributions = dense * coef
-    sorted_idx = contributions.argsort()
-    fn = np.array(feature_names)
+
+    abs_sorted = np.argsort(np.abs(contributions))[::-1]
+    top_idx = abs_sorted[:n * 4]
 
     fake_features = [
-        (fn[i], round(float(contributions[i]), 4))
-        for i in sorted_idx[:n]
+        (feature_names[i], round(float(contributions[i]), 4))
+        for i in top_idx
         if contributions[i] < 0
-    ]
+    ][:n]
+
     real_features = [
-        (fn[i], round(float(contributions[i]), 4))
-        for i in sorted_idx[-n:][::-1]
+        (feature_names[i], round(float(contributions[i]), 4))
+        for i in top_idx
         if contributions[i] > 0
-    ]
+    ][:n]
+
     return fake_features, real_features
 
 
-# ── ALIAS ─────────────────────────────────────────────────────────────────────
-
 def get_top_features(feat_matrix, model, vectorizer, n: int = 8):
-    """Auto-selects SHAP → coef fallback."""
-    return get_top_features_shap(feat_matrix, model, vectorizer, n)
+    return get_top_features_coef(feat_matrix, model, vectorizer, n)
 
-
-# ── LLM EXPLANATION ──────────────────────────────────────────────────────────
 
 def explain_prediction(news_text: str, prediction: int, proba,
                         fake_features, real_features) -> str:
@@ -110,15 +61,15 @@ def _get_groq_client():
 
     def call(news_text, prediction, proba, fake_f, real_f):
         client = Groq(api_key=api_key)
-        label      = "Fake News" if prediction == 0 else "Real News"
-        fake_conf  = round(proba[0] * 100, 1)
-        real_conf  = round(proba[1] * 100, 1)
+        label     = "Fake News" if prediction == 0 else "Real News"
+        fake_conf = round(proba[0] * 100, 1)
+        real_conf = round(proba[1] * 100, 1)
         prompt = f"""An ensemble ML classifier (Logistic Regression + Random Forest + XGBoost)
 analyzed this news text and classified it as **{label}**.
 
 Confidence: {fake_conf}% fake, {real_conf}% real.
 
-Top features pushing toward FAKE (SHAP / contribution scores):
+Top features pushing toward FAKE (contribution scores):
 {fake_f}
 
 Top features pushing toward REAL:
@@ -129,7 +80,7 @@ Original text:
 
 Explain in 3-5 sentences why the ensemble made this call.
 Reference the actual features listed. Be direct, no hedging.
-Do not explain how TF-IDF or SHAP works."""
+Do not explain how TF-IDF works."""
 
         response = client.chat.completions.create(
             model="llama-3.1-8b-instant",
